@@ -1,0 +1,27 @@
+<project name="com_konato_ode" default="jar">
+
+  <description>
+    Pack all com.konato.ode sources into a JAR.
+  </description>
+
+  <!-- The JAR file to create. -->
+  <property file="build.properties"/>
+  <property name="clojure.jar" location=""/>
+  <property name="clojure-contrib.jar" location=""/>
+  <property name="jarfile" location="com.konato.ode.jar"/>
+
+  <target name="clean"
+          description="Remove generated files and directories.">
+    <delete file="${jarfile}"/>
+  </target>
+
+  <target name="jar"
+          description="Create jar file.">
+    <jar jarfile="${jarfile}">
+      <fileset dir="." includes="README.*"/>
+      <fileset dir="." includes="epl-v10.html"/>
+      <fileset dir="." includes="src/**/*.clj"/>
+    </jar>
+  </target>
+
+</project>
