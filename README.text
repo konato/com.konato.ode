@@ -59,7 +59,7 @@ Auxiliary Functions
 
 # Examples ##
 
-A tutorial is available at my blog [stephane blog](http://www.konato.com/blog). 
+A tutorial is available at my blog [com.konato.ode Tutorial part 1](http://www.konato.com/2009/07/08/having-fun-with-ordinary-differential-equations-in-clojure-using-com-konato-ode-part-1). 
 
 The 'src/examples' directory contains some examples to get you started. 
 
