@@ -25,10 +25,9 @@
 (defn transferdampedho [m fv k xini xdotini T0 TF DT]
 "Test the Runge-Kutto order 4 method and the transfer2ode for a classic damped harmonic oscilator."
   (let [
-	DEN [1 (/ k m) (/ fv m)]
+	DEN [1 (/ fv m) (/ k m)]
 	NUM [0 1]
 	inp [0]
-	;inp [#(/ (:t %) m)]
 	fps (transfer2ode NUM DEN inp)
        ]
     (odesolve rk4 (:dotfps fps) {:x2 0.0, :x1 0.9} :t T0 TF DT (:outfps fps))
